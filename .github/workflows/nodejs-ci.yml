@@ -43,7 +43,7 @@ jobs:
         
     - name: Deploy to Heroku
       env:
-        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+        HEROKU_API_TOKEN: "31fd4d2f-f3fa-48cf-968d-ea0fcd170529"
         HEROKU_APP_NAME: "github-ci-action"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
